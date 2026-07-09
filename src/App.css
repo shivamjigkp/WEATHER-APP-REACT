@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background: url('sea.jpg') center center fixed; /* Background image */
+  background-size: cover; /* Ensure the background image covers the entire page */
+  filter: brightness(100%); /* Reduce brightness if necessary */
+  animation: desktopZoom 5s ease-in-out infinite; 
+  
+}
+
+@keyframes desktopZoom {
+  0% {
+    background-size: 100%; /* Start at normal size */
+  }
+  50% {
+    background-size: 102%; /* Slight zoom in */
+  }
+  100% {
+    background-size: 100%; /* Back to normal size */
+  }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 600px) {
+  body {
+    animation: mobileZoom 10s ease-in-out infinite; /* Mobile-specific zoom */
+  }
+
+  /* Mobile zoom animation */
+  @keyframes mobileZoom {
+    0% {
+      background-size: 200%; /* Start at 200% */
+    }
+    50% {
+      background-size: 180%; /* Zoom in */
+    }
+    100% {
+      background-size: 200%; /* Back to 200% */
+    }
+  }
+}
+
+.weather-search-container {
+  backdrop-filter: blur(-5px); /* Blur effect for the background */
+  padding: 15px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  text-align: center; /* Center text inside */
+  width: 90%; /* Responsive width */
+  height: auto;
+  max-width: 500px; /* Set a maximum width for larger screens */
+  backdrop-filter: blur(10px);
+  outline: 1px solid #fff;
+}
+  
+
+
+input[type="text"] {
+  width: 100%; /* Full width of the container */
+  padding: 10px;
+  margin-bottom: 10px; /* Space below the input */
+  border: 1px solid #ccc; /* Border style */
+  border-radius: 5px; /* Rounded corners */
+}
+
+button {
+  width: 100%; /* Full width of the container */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #4facfe; /* Button background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s; /* Transition effect */
+}
+
+button:hover {
+  background-color: #0b73e9; /* Change background on hover */
+}
+
+.messages {
+  padding-top: 10%;
+}
+
+.error {
+  color: red;
+}
+
+/* Media query for smaller screens like mobile */
+@media (max-width: 600px) {
+  .weather-search-container {
+    width: 90%; /* Use more width for mobile */
+    padding: 15px; /* Slightly reduce padding */
+  }
+
+  button {
+    padding: 8px 15px; /* Smaller padding on mobile */
+  }
+}
+
+.weather-result{
+  color: white;
+  font-size: 20px;
+}
+
+.heading-main{
+  color: rgb(255, 255, 255);
+}
+
+.jaison,a{
+  color: white;
+  text-align: center;
+  padding-bottom: 2px;
+  text-decoration: none;
+}
+/* ---- ML Insights Section ---- */
+.ml-insights {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.ml-loading {
+  color: #eee;
+  font-style: italic;
+  text-align: center;
+}
+
+.ml-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: #fff;
+  text-align: left;
+}
+
+.ml-card h3 {
+  margin: 0 0 5px 0;
+  font-size: 15px;
+}
+
+.ml-card p {
+  margin: 2px 0;
+  font-size: 14px;
+}
+
+.ml-anomaly.anomaly-alert {
+  background: rgba(255, 87, 87, 0.3);
+  border: 1px solid rgba(255, 87, 87, 0.6);
+}
