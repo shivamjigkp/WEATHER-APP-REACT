@@ -129,10 +129,17 @@ function App() {
         </div>
       </body>
       <div className="jaison">
-        <a target="_blank" href="https://www.linkedin.com/in/jaison-jaideep-lobo/" rel="noreferrer">
-          Developed By ~ Jaison Lobo
+       <span>Developed By ~ Shivam Gupta</span>
+       {" | "}
+        <a target="_blank" href="https://linkedin.com/in/shivam-gupta-05209a27b" rel="noreferrer">
+        LinkedIn
+        </a>
+       {" | "}
+        <a target="_blank" href="https://github.com/shivamjigkp" rel="noreferrer">
+        GitHub
         </a>
       </div>
+      
     </>
   );
 }
